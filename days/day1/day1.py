@@ -15,13 +15,8 @@ def part_1(input_data: list) -> int:
 
 
 def part_2(input_data: list) -> int:
-    sliding_window_sums = []
     window = 3
-
-    for i in range(0, len(input_data)):
-        sliding_window_sums.append(sum(input_data[i:i+window]))
-
-    return get_number_of_higher_readings(sliding_window_sums)
+    return get_number_of_higher_readings([sum(input_data[i:i+window]) for i in range(0, len(input_data))])
 
 
 input_dir = 'day1/input'
