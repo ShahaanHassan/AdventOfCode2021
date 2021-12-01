@@ -1,4 +1,4 @@
-from helpers.file_manager import read_file_as_list
+from helpers.file_manager import read_file_as_int_list
 
 
 def get_number_of_higher_readings(input_data: list) -> int:
@@ -25,6 +25,6 @@ def part_2(input_data: list) -> int:
 
 
 input_dir = 'day1/input'
-data = read_file_as_list(input_dir)
+data = read_file_as_int_list(input_dir)
 print(part_1(data))
 print(part_2(data))
