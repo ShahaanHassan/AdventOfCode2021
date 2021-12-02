@@ -19,7 +19,7 @@ def part_2(input_data: list) -> int:
     return get_number_of_higher_readings([sum(input_data[i:i+window]) for i in range(0, len(input_data))])
 
 
-input_dir = 'day1/input'
+input_dir = 'day1/input.txt'
 data = read_file_as_int_list(input_dir)
 print(part_1(data))
 print(part_2(data))
