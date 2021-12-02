@@ -1,10 +1,6 @@
 from helpers.file_manager import read_file_as_list
 
 
-def split_commands(input_data: list) -> list:
-    return [command.split(' ') for command in input_data]
-
-
 def part_1(input_data: list) -> int:
     horizontal, depth = 0, 0
     for line in input_data:
