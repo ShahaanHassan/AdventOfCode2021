@@ -39,12 +39,12 @@ def most_common(input_data: list, index: int, dominant: bool) -> str:
 
 
 def true_reading(input_data: list, dominant: bool) -> str:
-    oxygen_data = input_data.copy()
+    refined_data = input_data.copy()
     for i in range(0, len(input_data[0])):
-        most_common_value = most_common(oxygen_data, i, dominant)
-        oxygen_data = [x for x in oxygen_data if x[i] == most_common_value]
-        if len(oxygen_data) == 1:
-            return oxygen_data[0]
+        most_common_value = most_common(refined_data, i, dominant)
+        refined_data = [x for x in refined_data if x[i] == most_common_value]
+        if len(refined_data) == 1:
+            return refined_data[0]
     return ''
 
 
