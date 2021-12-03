@@ -9,7 +9,7 @@ def get_path_to_days(file_path: str) -> str:
 
 def read_file_as_list(path: str) -> list:
     with open(get_path_to_days(path)) as file:
-        return file.readlines()
+        return [i.rstrip() for i in file.readlines()]
 
 
 def read_file_as_int_list(path: str) -> list:
