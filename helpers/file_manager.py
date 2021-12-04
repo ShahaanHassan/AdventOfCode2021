@@ -15,3 +15,8 @@ def read_file_as_list(path: str) -> list:
 def read_file_as_int_list(path: str) -> list:
     with open(get_path_to_days(path)) as file:
         return [int(i) for i in file.readlines()]
+
+
+def read_lines_with_split_as_int(path: str, split=',') -> list:
+    with open(get_path_to_days(path)) as file:
+        return [int(i) for i in file.readline().split(split)]
