@@ -1,9 +1,13 @@
 from helpers.file_manager import read_lines_with_split_as_int
 
 
+def format_population(population: list) -> dict:
+    return {i: x for i, x in enumerate(population)}
+
+
 def simulate_fish(fishes: list, days=18) -> int:
     population = [fishes.count(i) for i in range(0, 9)]
-    print('day 0: {}'.format(population))
+    print('day 0: {}'.format(format_population(population)))
 
     for day in range(1, days + 1):
         new_population = [0] * 9
@@ -13,7 +17,7 @@ def simulate_fish(fishes: list, days=18) -> int:
                 new_population[8] = population[0]
             new_population[index - 1] = population[index]
         population = new_population
-        print('day {}: {}'.format(day, {i: x for i, x in enumerate(population)}))
+        print('day {}: {}'.format(day, format_population(population)))
     return sum(population)
 
 
