@@ -10,13 +10,12 @@ def simulate_fish(fishes: list, days=18) -> int:
     print('day 0: {}'.format(format_population(population)))
 
     for day in range(1, days + 1):
-        new_population = [0] * 9
-        for index in range(8, 0, -1):
-            if index == 1:
-                new_population[6] += population[0]
-                new_population[8] = population[0]
-            new_population[index - 1] = population[index]
-        population = new_population
+        current_breeders = population[0]
+        for index in range(0, 8):
+            population[index] = population[index + 1]
+            if index == 7:
+                population[6] += current_breeders
+                population[8] = current_breeders
         print('day {}: {}'.format(day, format_population(population)))
     return sum(population)
 
