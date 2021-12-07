@@ -2,7 +2,7 @@ from helpers.file_manager import read_lines_with_split_as_int
 
 
 def get_fuel_with_sum(diff: int) -> int:
-    return int(diff * (diff + 1) / 2)
+    return diff * (diff + 1) // 2
 
 
 def part_1(input_data: list) -> int:
