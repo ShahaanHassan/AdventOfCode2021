@@ -19,9 +19,6 @@ class Node:
     def add_neighbour(self, val):
         self.neighbours.append(val)
 
-    def get_neighbours(self) -> list:
-        return self.neighbours.copy()
-
 
 def format_data(input_data: list):
     return np.array([[int(x) for x in line] for line in input_data])
