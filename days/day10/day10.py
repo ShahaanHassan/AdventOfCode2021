@@ -35,14 +35,6 @@ def check_line(line: list, stack: list, score_map: dict, brackets_map: dict, par
     return check_line(line, stack, score_map, brackets_map, part)
 
 
-def check_lines(lines: list, score_map=create_score_map):
-    brackets_map, score_map = create_brackets_map(), score_map()
-    score = 0
-    for line in lines:
-        score += check_line(list(line)[1:], [line[0]], score_map, brackets_map, 1)
-    return score
-
-
 def part_1(lines: list, score_map=create_score_map) -> int:
     brackets_map, score_map = create_brackets_map(), score_map()
     score = 0
