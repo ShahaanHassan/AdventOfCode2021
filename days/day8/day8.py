@@ -34,7 +34,7 @@ def segment_mapping():
         4: ['tl', 'tr', 'm', 'br'],
         5: ['tl', 't', 'm', 'br', 'b'],
         6: ['tl', 't', 'm', 'bl', 'br', 'b'],
-        7: ['t', 'tr','br'],
+        7: ['t', 'tr', 'br'],
         8: ['tl', 't', 'tr', 'm', 'bl', 'br', 'b'],
         9: ['tl', 't', 'tr', 'm', 'br', 'b']
     }
@@ -91,8 +91,6 @@ def part_2(input_data: list):
                     break
         final_sum += int(output)
     return final_sum
-
-
 
 
 if __name__ == "__main__":
