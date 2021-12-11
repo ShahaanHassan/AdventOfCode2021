@@ -34,7 +34,7 @@ def bound(val: int, size=10) -> int:
     return val
 
 
-def flash_octopuses(grid, steps=100, size=10, convergence=False):
+def flash_octopuses(grid, steps=100, size=10, convergence=False) -> int:
     final_sum = 0
     for step in range(0, steps):
         have_flashed, to_flash = set(), set()
@@ -65,12 +65,12 @@ def flash_octopuses(grid, steps=100, size=10, convergence=False):
     return final_sum
 
 
-def part_1(input_data):
-    return flash_octopuses(input_data)
+def part_1(grid) -> int:
+    return flash_octopuses(grid)
 
 
-def part_2(input_data):
-    return flash_octopuses(input_data, 10000, convergence=True)
+def part_2(grid) -> int:
+    return flash_octopuses(grid, 10000, convergence=True)
 
 
 if __name__ == "__main__":
