@@ -59,7 +59,7 @@ def flash_octopuses(grid, steps=100, size=10, convergence=False):
                 fp.val = 0
 
         final_sum += flash_count
-        if convergence and flash_count == 100:
+        if convergence and flash_count == size*size:
             return step + 1
 
     return final_sum
