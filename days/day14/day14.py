@@ -2,6 +2,7 @@ from collections import defaultdict
 from typing import Tuple
 
 from helpers.file_manager import read_file_as_list
+import time
 
 
 def process_input(data: list) -> Tuple[list, dict]:
@@ -46,5 +47,9 @@ def part_2(data: list) -> int:
 
 if __name__ == '__main__':
     input_data = read_file_as_list('day14/input.txt')
+    start = time.time() * 1000
     print(part_1(input_data))
     print(part_2(input_data))
+    end = time.time() * 1000
+    # both parts roughly take between 3-4 ms.
+    print('time taken: {} ms'.format(round(end-start, 2)))
