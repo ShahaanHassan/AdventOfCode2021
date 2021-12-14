@@ -31,7 +31,7 @@ def chain_polys(data: list, iterations: int) -> int:
 
     sums = defaultdict(int)
     for x, y in poly_pairs.items():
-        sums[x[0]] = sums.get(x[0], 0) + y
+        sums[x[0]] += y
     sums[base[-1]] += 1
     return max(sums.values()) - min(sums.values())
 
