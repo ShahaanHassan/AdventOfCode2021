@@ -59,11 +59,11 @@ def part_2(data: list):
             page = fold_vertical(page, fold[1])
         else:
             page = fold_horizontal(page, fold[1])
-    for row in page:
-        print(row)
+    return page
 
 
 if __name__ == '__main__':
+    np.set_printoptions(suppress=True, linewidth=np.nan)
     input_data = read_file_as_list('day13/input.txt')
     print(part_1(input_data))
-    part_2(input_data)
+    print(part_2(input_data))
