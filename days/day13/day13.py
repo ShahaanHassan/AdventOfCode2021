@@ -63,7 +63,7 @@ def part_2(data: list):
 
 
 if __name__ == '__main__':
-    np.set_printoptions(suppress=True, linewidth=np.nan)
+    np.set_printoptions(linewidth=np.nan)
     input_data = read_file_as_list('day13/input.txt')
     print(part_1(input_data))
     print(part_2(input_data))
