@@ -46,8 +46,8 @@ def part_2(data: list) -> int:
 
 
 if __name__ == '__main__':
-    input_data = read_file_as_list('day14/input.txt')
     start = time.time() * 1000
+    input_data = read_file_as_list('day14/input.txt')
     print(part_1(input_data))
     print(part_2(input_data))
     end = time.time() * 1000
